@@ -28,7 +28,7 @@ export const story = {
   contentWarning: "",
   sample: false,
   hero: {
-    video: "/assets/PRATTIC%20V2.mp4",
+    video: "/assets/PRATTIC.mp4",
     showDek: false,
   },
   credits: [
