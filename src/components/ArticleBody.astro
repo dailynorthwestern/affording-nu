@@ -11,6 +11,8 @@ const { blocks, sample, illustrations = [] } = Astro.props;
 const firstOtherBlock = blocks.findIndex(block => block.type !== 'paragraph');
 const openingCount = illustrations.length ? (firstOtherBlock < 0 ? blocks.length : firstOtherBlock) : 0;
 const opening = blocks.slice(0, openingCount);
+const closingStart = blocks.findIndex((block, index) => index >= openingCount && block.illustration);
+const closing = closingStart < 0 ? [] : blocks.slice(closingStart);
 ---
 <div class="article-body" id="story-body">
   <div class="story-entry-overlay" data-story-entry-overlay aria-hidden="true"></div>
@@ -22,7 +24,7 @@ const opening = blocks.slice(0, openingCount);
       <p class:list={['body-copy', { lead: block.lead }]} data-reveal={block.animate} set:html={inline(block.text)} />
     </>)}
   </div>}
-  {blocks.slice(openingCount).map((block, index) => <>
+  {blocks.slice(openingCount, closingStart < 0 ? blocks.length : closingStart).map((block, index) => <>
     {block.type === 'paragraph' && <p class:list={['reading-column', 'body-copy', { lead: block.lead }]} data-reveal={block.animate} set:html={inline(block.text)} />}
     {block.type === 'heading' && <div class="section-heading reading-column" id={block.id} data-reveal={block.animate}>{block.label && <p class="eyebrow">{block.label}</p>}<h2 set:html={inline(block.text)} /></div>}
     {block.type === 'audioCard' && <AudioStoryCard block={block} id={`audio-card-${index + openingCount}`} />}
@@ -31,4 +33,10 @@ const opening = blocks.slice(0, openingCount);
     {block.type === 'scrolly' && <ScrollySection block={block} />}
     {['video', 'embed'].includes(block.type) && <VideoEmbed block={block} />}
   </>)}
+  {closing.length > 0 && <div class="illustrated-opening">
+    {closing.map(block => <>
+      {block.illustration && <DecorativeIllustration {...block.illustration} anchored />}
+      <p class:list={['body-copy', { lead: block.lead }]} data-reveal={block.animate} set:html={inline(block.text)} />
+    </>)}
+  </div>}
 </div>

@@ -1,10 +1,10 @@
 ---
 import { getImage } from 'astro:assets';
-const { image, side = 'left', anchored = false } = Astro.props;
+const { image, side = 'left', anchored = false, variant } = Astro.props;
 // Use the same transparent bitmap for rendering and CSS alpha wrapping.
 const illustration = await getImage({ src: image, width: 1000, format: 'png' });
 ---
-<img class:list={['decorative-illustration', `decorative-illustration--${side === 'right' ? 'right' : 'left'}`, { 'decorative-illustration--anchored': anchored }]}
+<img class:list={['decorative-illustration', `decorative-illustration--${side === 'right' ? 'right' : 'left'}`, { 'decorative-illustration--anchored': anchored }, variant && `decorative-illustration--${variant}`]}
   style={`--illustration-shape: url("${illustration.src}")`}
   src={illustration.src} width={illustration.attributes.width} height={illustration.attributes.height}
   alt="" aria-hidden="true" decoding="async" />
@@ -36,6 +36,12 @@ const illustration = await getImage({ src: image, width: 1000, format: 'png' });
     margin-top: -20px;
     margin-right: 300px;
 
+  }
+
+  .decorative-illustration--chair {
+    width: min(22vw, 350px);
+    margin-top: -50px;
+    margin-right: 300px;
   }
 
   @media (max-width: 1000px) {

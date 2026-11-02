@@ -10,6 +10,7 @@ import kat from "../assets/kat.jpg";
 import beercans from "../assets/beercans.PNG";
 import beercans_left from "../assets/beercans_left.PNG";
 import toilet from "../assets/toilet.PNG";
+import chair from "../assets/chair.png";
 
 export const story = {
   title:
@@ -20,6 +21,10 @@ export const story = {
     {
       name: "Jack Greenspan, Multimedia Features Editor",
       url: "https://dailynorthwestern.com/staff_name/jack-greenspan/",
+    },
+    {
+      name: "Illustrations by Nicole Cheah",
+      url: "https://dailynorthwestern.com/staff_name/nicole-cheah/",
     },
   ],
   date: "2026-10-27",
@@ -316,6 +321,7 @@ Looking back, Mikhail called The Prattic a “cultural moment” for the NU comm
     },
     {
       type: "paragraph",
+      illustration: { image: chair, side: "right", variant: "chair" },
       text: "As NU comedians search for the next hot stage, Heller has one piece of advice for anyone trying to run a comedy show: stop worrying about making money.",
     },
     {
