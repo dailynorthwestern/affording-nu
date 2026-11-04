@@ -11,7 +11,7 @@ export const story = {
   title:
     "Crowned king of the Wildcat Wall, Joe Spivak wants more for NU’s student section",
   kicker: "In Focus",
-  dek: "Along the edge of Lake Michigan, a changing shoreline tells a story of place, community and the ties that hold us together.",
+  dek: "Meet Joe Spivak, the man leading the Wildcat Wall.",
   authors: [
     {
       name: " Audrey Pachuta, Senior Staffer",
@@ -329,7 +329,7 @@ export const story = {
 },
 {
   type: "paragraph",
-  text: "*Jack Greenspan contributed reporting.*",
+  text: "(Jack Greenspan contributed reporting.)",
 },
   ],
 };
