@@ -2,17 +2,8 @@
 // The Prattic article is reproduced from the supplied draft with editorial annotations removed.
 // Images: add files to public/assets/ and use /assets/filename.jpg.
 // Alternatively import an image from src/assets/ and use it as src for automatic optimization.
-import natalieMay from "../assets/Natalie_May.jpg";
-import haikal from "../assets/Haikal_Rozaidi.jpg";
-import andrew from "../assets/Andrew_Mikhail.jpg";
-import spencer from "../assets/Spencer_Thomas.jpg";
-import kat from "../assets/kat.jpg";
-import beercans from "../assets/beercans.PNG";
-import beercans_left from "../assets/beercans_left.PNG";
-import toilet from "../assets/toilet.PNG";
-import chair from "../assets/chair.png";
-const newhero = "/assets/newhero.mp4";
-import pacing from "../assets/Pacing.mp4";
+import activity from '../assets/activity.jpg';
+
 
 export const story = {
   title:
@@ -34,6 +25,10 @@ export const story = {
     video: "/assets/newhero.mp4",
     showDek: false,
   },
+  // Swap the second visual here. Hero media lives in hero.video above.
+  intro: {
+    scrollMedia: { type: "video", src: "/assets/Pacing.mp4" },
+  },
   credits: [
     { role: "Editor in Chief", name: "Anavi Prakash" },
     { role: "Web Developer", name: "Eunice Lee" },
@@ -44,7 +39,8 @@ export const story = {
     //{ image: beercans_left, side: "left" },
     //{ image: beercans, side: "right" },
   // ],
-  blocks: [
+  // The three opening scroll steps, shown once before the normal article.
+  introParagraphs: [
     {
       type: "paragraph",
       text: "Ninety minutes before any fan could enter the stadium and three hours before Northwestern kicked off its Oct. 24 game against Rutgers[cq], former defensive lineman Joe Spivak [cq][cq] paced back and forth in a row of the empty Wildcat Wall.", 
@@ -55,8 +51,10 @@ export const story = {
     },
     {
       type: "paragraph",
-      text: "“I’m not the spark of energy,” he said with a performative raspiness in his voice. “You are, the students are.” ",
+      text: "‘I’m not the spark of energy,’ he said with a performative raspiness in his voice. ‘You are, the students are.’ ",
     },
+  ],
+  blocks: [
     /*{
       type: "video",
       id: "pacing-video",
@@ -96,9 +94,6 @@ export const story = {
     {
       type: "audioCard",
       id: "natalie-may-audio",
-      image: natalieMay,
-      imageAlt:
-        "Natalie May smiling outdoors in front of a brick building and trees",
       description: `May said The Prattic encouraged students to go outside of their comfort zones. 
 
       “It made vulnerability and trying something new cool,” she said.`,
@@ -119,9 +114,6 @@ export const story = {
     {
       type: "audioCard",
       id: "haikal-rozaidi-audio",
-      image: haikal,
-      imageAlt:
-        "Haikal Rozaidi smiling next to a sign that indicates the intersection of Foster and Pratt",
       description: `Rozaidi discovered The Prattic after coming to Northwestern from The Ohio State University. 
 
       “What The Prattic had... it was lightning in a bottle,” Rozaidi said.`,
@@ -152,8 +144,6 @@ export const story = {
     {
       type: "audioCard",
       id: "spencer-thomas-audio",
-      image: spencer,
-      imageAlt: "Spencer in front of the Prattic house",
       description: `Spencer Thomas (Communication ‘26) had no formal standup experience before The Prattic, but he knew he liked talking to people and telling jokes. After performing his first comedy routine there, he kept going back.
       
       “(The Prattic) is a place where you're supposed to experiment,” he said.`,
@@ -185,6 +175,18 @@ export const story = {
       text: "“We have a term in education theory called a third space: where cultural production happens … where people can be absurd and funny and risky and vulnerable, and that was what I saw,” Vakil said.",
     },
     {
+      type: "image",
+      src: activity,
+      alt: "People gathered around a table with orange cups and pumpkin buckets at Northwestern.",
+      width: activity.width,
+      height: activity.height,
+      layout: "full",
+      sizes: "100vw",
+      caption: "Caption placeholder — add photo description here.",
+      credit: "Photo credit: Photographer name / The Daily Northwestern",
+      creditUrl: "", // Optional photographer profile URL.
+    },
+    {
       type: "heading",
       text: "Comedy meets activism",
       id: "comedy-meets-activism",
@@ -204,8 +206,6 @@ export const story = {
     /*{
       type: "audioCard",
       id: "kat-abughazaleh-audio",
-      image: kat,
-      imageAlt: "Kat speaking at the Prattic",
       description: `Abughazaleh said politicians shouldn’t discount college students and young creatives in their campaign efforts. 
 
       “‘Real America' is a college attic with a lot of ‘Young Sheldon’ merch on the walls,” she said.`,
@@ -267,8 +267,6 @@ export const story = {
     /*{
       type: "audioCard",
       id: "andrew-mikhail-audio",
-      image: andrew,
-      imageAlt: "Andrew sitting on the steps of the Prattic house",
       description: `After meeting Prattic co-founder Luca Hirsch in a standup comedy class at NU, Mikhail was invited to come to the venue around the time it first started up. 
 
 Looking back, Mikhail called The Prattic a “cultural moment” for the NU community.`,

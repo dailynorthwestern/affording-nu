@@ -1,4 +1,3 @@
-import { storyTransitionOpacity } from '../lib/story-transition.js';
 
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 // Content remains readable without JavaScript and if observers are unavailable.
@@ -33,33 +32,11 @@ if ('IntersectionObserver' in window) {
     steps.forEach(step => observer.observe(step));
   });
 }
-const storyBody = document.querySelector('#story-body');
-const entryOverlay = storyBody?.querySelector('[data-story-entry-overlay]');
-const fifthParagraph = storyBody?.querySelectorAll(':scope > .body-copy, :scope > [data-illustrated-opening] > .body-copy')[4];
-function updateStoryEntry() {
-  if (!entryOverlay || !fifthParagraph) return;
-  if (reduced.matches) {
-    entryOverlay.style.opacity = '0';
-    return;
-  }
-  const storyTop = storyBody.getBoundingClientRect().top;
-  const fifthTop = fifthParagraph.getBoundingClientRect().top;
-  entryOverlay.style.height = `${Math.max(0, fifthTop - storyTop)}px`;
-  entryOverlay.style.opacity = String(storyTransitionOpacity(storyTop, fifthTop, innerHeight));
-}
-reduced.addEventListener('change', updateStoryEntry);
-// Recalculate when fonts or responsive content change the opening paragraphs' height.
-if (storyBody && 'ResizeObserver' in window) {
-  new ResizeObserver(() => scheduleProgress()).observe(storyBody);
-}
-document.fonts?.ready.then(() => scheduleProgress());
-addEventListener('pageshow', () => scheduleProgress());
 const progress = document.querySelector('.reading-progress');
 let scheduled = false;
 function updateProgress() {
   const height = document.documentElement.scrollHeight - innerHeight;
   progress?.style.setProperty('--progress', String(height > 0 ? Math.min(1, Math.max(0, scrollY / height)) : 0));
-  updateStoryEntry();
   scheduled = false;
 }
 function scheduleProgress() {
@@ -68,14 +45,3 @@ function scheduleProgress() {
 addEventListener('scroll', scheduleProgress, { passive: true });
 addEventListener('resize', scheduleProgress);
 updateProgress();
-const video = document.querySelector('[data-hero-video]');
-if (video) {
-  const syncHeroMotion = () => {
-    video.muted = true;
-    video.autoplay = !reduced.matches;
-    if (reduced.matches) video.pause();
-    else video.play().catch(() => { /* The dark background preserves text readability if autoplay is unavailable. */ });
-  };
-  reduced.addEventListener('change', syncHeroMotion);
-  syncHeroMotion();
-}

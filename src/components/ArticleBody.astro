@@ -15,7 +15,6 @@ const closingStart = blocks.findIndex((block, index) => index >= openingCount &&
 const closing = closingStart < 0 ? [] : blocks.slice(closingStart);
 ---
 <div class="article-body" id="story-body">
-  <div class="story-entry-overlay" data-story-entry-overlay aria-hidden="true"></div>
   {sample && <aside class="sample-note reading-column"><span class="sample-dot"></span><span><strong>A story starts here.</strong> This is a sample article. All copy and quotations are illustrative.</span></aside>}
   {opening.length > 0 && <div class="illustrated-opening" data-illustrated-opening>
     {illustrations.map(illustration => <DecorativeIllustration {...illustration} />)}

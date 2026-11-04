@@ -33,9 +33,9 @@ test('supports local native videos but rejects local iframe embeds', () => {
  assert.throws(() => validateStory(value), /Media needs/);
 });
 
-test('audio cards allow missing audio and reject unsafe source URLs', () => {
+test('audio cards allow missing images and audio and reject unsafe source URLs', () => {
  const value = story();
- value.blocks = [{type:'audioCard',image, imageAlt:'Natalie May outdoors',description:'A short introduction',audioLabel:'Listen to Jack',transcript:'Transcript goes here.',audioSrc:''}];
+ value.blocks = [{type:'audioCard',description:'A short introduction',audioLabel:'Listen to Jack',transcript:'Transcript goes here.',audioSrc:''}];
  assert.doesNotThrow(() => validateStory(value));
  value.blocks[0].audioSrc = 'javascript:bad';
  assert.throws(() => validateStory(value), /Audio sources/);

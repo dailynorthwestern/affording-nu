@@ -28,7 +28,7 @@ export function validateStory(story) {
     if (block.type === 'image') image(block);
     if (['video','embed'].includes(block.type) && (!( /^https:\/\//.test(block.src) || (block.type === 'video' && block.kind === 'native' && /^\/(?!\/)/.test(block.src)) ) || !block.title)) throw new Error('Media needs an HTTPS embed src (or local native video path) and descriptive title.');
     if (block.type === 'audioCard') {
-      if (!block.image || !block.imageAlt || !block.description || !block.audioLabel || !block.transcript) throw new Error('Audio cards need image, imageAlt, description, audioLabel, and transcript.');
+      if (!block.description || !block.audioLabel || !block.transcript) throw new Error('Audio cards need description, audioLabel, and transcript.');
       if (block.audioSrc && !/^(https:\/\/|\/(?!\/))/.test(block.audioSrc)) throw new Error('Audio sources must be an HTTPS URL or a local absolute path.');
     }
     if (block.type === 'scrolly') {

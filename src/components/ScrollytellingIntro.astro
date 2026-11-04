@@ -1,0 +1,61 @@
+---
+import Hero from './Hero.astro';
+import { asset } from '../lib/content.js';
+const { story } = Astro.props;
+const { scrollMedia } = story.intro;
+const paragraphs = story.introParagraphs;
+---
+<section class="story-intro" data-story-intro aria-label="Story opening">
+  <div class="intro-stage">
+    <div class="intro-background" aria-hidden="true">
+      {scrollMedia.type === 'video' ? (
+        <video src={asset(scrollMedia.src)} poster={scrollMedia.poster ? asset(scrollMedia.poster) : undefined} muted loop playsinline preload="metadata" data-intro-video tabindex="-1" />
+      ) : <img src={asset(scrollMedia.src)} alt="" />}
+    </div>
+    <div class="intro-hero"><Hero story={story} /></div>
+    <div class="intro-panels">
+      {paragraphs.map((paragraph, index) => <p class="intro-panel" data-intro-panel={index}>{paragraph.text}</p>)}
+    </div>
+  </div>
+  <div class="intro-track" aria-hidden="true">
+    <div class="intro-hero-space"></div>
+    <div id="intro-steps">
+      {paragraphs.map((_, index) => <div class="intro-step" data-intro-step={index}></div>)}
+    </div>
+  </div>
+</section>
+<script>
+  import '../scripts/intro.js';
+</script>
+<style>
+.story-intro { position: relative; background: #17151a; color: white; }
+.intro-stage { position: relative; }
+.intro-background { position: absolute; inset: 0; }
+.intro-background video, .intro-background img { width: 100%; height: 100%; object-fit: cover; }
+.intro-background::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 25%, rgb(0 0 0 / .8)); }
+.intro-hero { position: relative; }
+.intro-panels { position: relative; padding: 32px 20px; }
+.intro-panel { max-width: 680px; margin: 0 auto 2em; font: 400 20px/1.4 var(--font-editorial); text-shadow: 0 2px 4px rgb(0 0 0 / .9), 0 4px 16px rgb(0 0 0 / .7); }
+.intro-track { display: none; }
+.intro-enhanced .intro-stage { position: sticky; top: var(--header-height); height: calc(100svh - var(--header-height)); overflow: hidden; }
+.intro-enhanced .intro-hero { position: absolute; inset: 0; opacity: var(--hero-opacity, 1); }
+.intro-enhanced .intro-hero :global(.hero) { min-height: 100%; height: 100%; }
+.intro-enhanced .intro-hero.is-dismissed { visibility: hidden; pointer-events: none; }
+.intro-enhanced .intro-panels { position: absolute; inset: 0; display: grid; align-items: end; padding: 32px 20px max(9svh, env(safe-area-inset-bottom)); pointer-events: none; }
+.intro-enhanced .intro-panel { grid-area: 1/1; width: 100%; margin: 0 auto; opacity: 0; transform: translateY(18px); transition: opacity .4s ease, transform .4s ease; }
+.intro-enhanced .intro-panel.is-active { opacity: 1; transform: translateY(0); }
+.intro-enhanced .intro-track { display: block; position: relative; margin-top: calc(-100svh + var(--header-height)); pointer-events: none; }
+.intro-hero-space, .intro-step { height: calc(100svh - var(--header-height)); }
+@media (max-width: 600px) {
+  .intro-enhanced .intro-panels { padding: 24px 20px max(6svh, env(safe-area-inset-bottom)); }
+}
+@media (max-width: 700px) {
+  .intro-panel { font-size: 18px; }
+}
+@media (max-height: 500px) {
+  .intro-enhanced .intro-panels { padding-bottom: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .intro-enhanced .intro-panel { transform: none; transition: none; }
+}
+</style>

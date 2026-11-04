@@ -1,8 +1,12 @@
 ---
 import MediaImage from './MediaImage.astro';
+import { safeURL } from '../lib/content.js';
 const { block } = Astro.props;
 ---
 <figure class:list={['article-image', `article-image--${block.layout || 'inline'}`]} data-reveal={block.animate}>
   <MediaImage {...block} />
-  <figcaption>{block.caption}{block.credit && <span class="photo-credit">{block.credit}</span>}</figcaption>
+  <figcaption>
+    {block.credit && <span class="photo-credit">{block.creditUrl ? <a href={safeURL(block.creditUrl)}>{block.credit}</a> : block.credit}</span>}
+    {block.caption && <span class="photo-caption">{block.caption}</span>}
+  </figcaption>
 </figure>
