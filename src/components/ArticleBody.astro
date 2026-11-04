@@ -1,4 +1,5 @@
 ---
+import AddReporting from './AddReporting';
 import ArticleImage from './ArticleImage.astro';
 import DecorativeIllustration from './DecorativeIllustration.astro';
 import AudioStoryCard from './AudioStoryCard.astro';
@@ -31,6 +32,7 @@ const closing = closingStart < 0 ? [] : blocks.slice(closingStart);
     {block.type === 'quote' && <PullQuote block={block} />}
     {block.type === 'scrolly' && <ScrollySection block={block} />}
     {['video', 'embed'].includes(block.type) && <VideoEmbed block={block} />}
+    {block.type === "addreporting" && <addreporting {...block} />}
   </>)}
   {closing.length > 0 && <div class="illustrated-opening">
     {closing.map(block => <>

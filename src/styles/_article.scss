@@ -14,7 +14,7 @@
 .hero h1 { margin: 0 0 18px; font: 600 clamp(32px, 3vw, 58px)/1.15 var(--font-editorial); letter-spacing: normal; }
 .hero-dek { margin: 0 0 20px; font: 400 18px/1.4 var(--font-editorial); }
 .hero-byline { margin: 0; color: #fff; font-size: 16px; line-height: 1.5; }
-.hero-byline a { color: inherit; text-decoration: none; }
+.hero-byline a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .meta-dot { margin-inline: 7px; }
 .hero-warning { margin: 24px 0 0; font: italic 400 22px/1.3 var(--font-editorial); }
 .hero-visual { position: absolute; z-index: -1; inset: 0; overflow: hidden; }
@@ -55,11 +55,9 @@
 .article-image--wide { width: min(1100px, calc(100% - 64px)); }
 .article-image--full { width: 100%; }
 .article-image img { width: 100%; height: auto; }
-.article-image--full img { height: auto; }
+.article-image--full img { max-height: 80svh; object-fit: cover; }
 figcaption { font: 400 .75rem/1.6 var(--font-editorial); color: var(--muted); padding-top: .8rem; }
-.article-image figcaption { text-align: center; padding-bottom: .8rem; }
-.photo-credit { display: block; font-size: .65rem; color: var(--daily-purple); margin-bottom: .4rem; }
-.photo-caption { display: block; font-size: .75rem; color: var(--ink); }
+.photo-credit { display: block; font-size: .65rem; color: var(--muted); margin-top: .15rem; }
 .article-image--full figcaption { padding-inline: 24px; }
 .pull-quote { width: min(850px, calc(100% - 48px)); margin: 5rem auto; text-align: center; padding: 1rem; color: var(--daily-purple); }
 .quote-mark { display: block; font: 5rem/.8 var(--font-editorial); color: var(--daily-purple); }
@@ -122,7 +120,20 @@ figcaption { font: 400 .75rem/1.6 var(--font-editorial); color: var(--muted); pa
 }
 @media(prefers-reduced-motion: reduce) { .reveal-ready { opacity: 1; transform: none; } }
 
-.article-body { position: relative; display: flow-root; background: #fff; color: #17151a; }
+@media(prefers-reduced-motion: reduce) { .hero-media { visibility: hidden; } }
+
+// Confine the darkness to the story opening; no layout space or input interception.
+.article-body { position: relative; isolation: isolate; display: flow-root; }
+.story-entry-overlay {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 10;
+  height: 0;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+}
+@media(prefers-reduced-motion: reduce) { .story-entry-overlay { display: none; } }
 
 // Paragraph boxes span the floats' formatting context. Padding establishes the
 // usual 680px reading measure without independently centering each paragraph box.

@@ -3,11 +3,13 @@
 // Images: add files to public/assets/ and use /assets/filename.jpg.
 // Alternatively import an image from src/assets/ and use it as src for automatic optimization.
 import activity from '../assets/activity.jpg';
+import pacing from '../assets/pacing.jpg';
+import handup from '../assets/handup.jpg';
 
 
 export const story = {
   title:
-    "Tasked with bolstering Northwestern’s student section, Joe Spivak believes he’s the right man for the job",
+    "Crowned king of the Wildcat Wall, Joe Spivak wants more for NU’s student section",
   kicker: "In Focus",
   dek: "Along the edge of Lake Michigan, a changing shoreline tells a story of place, community and the ties that hold us together.",
   authors: [
@@ -19,8 +21,29 @@ export const story = {
   date: "2026-11-02",
   readTime: "6 minute read",
   // Optional warning; leave empty to omit it.
-  contentWarning: "",
+  
+    contentWarning: "",
   sample: false,
+  contactEmails: ["AudreyPachuta2027@u.northwestern.edu"],
+  // URL PLACEHOLDERS: Replace each "#related-stories-heading" with the real
+  // article URL. Until then, these links stay at the Related Stories heading.
+  relatedStories: [
+    {
+      title:
+        "Rapid Recap: Oregon 34, No. 20 Northwestern 26",
+      url: "https://dailynorthwestern.com/2026/10/31/sports/rapid-recap-oregon-34-no-20-northwestern-26/", // TODO: Add this story's URL.
+    },
+    {
+      title: "Gallery: Northwestern defeats Rutgers 42-14",
+      url: "https://dailynorthwestern.com/2026/10/26/photo/gallery-northwestern-defeats-rutgers-42-14/", // TODO: Add this story's URL.
+    },
+    {
+      title:
+        "Ryan Field set to open after multi-year, $875 million development",
+      url: "https://dailynorthwestern.com/2026/09/29/sports/ryan-field-set-to-open-after-multi-year-875-million-development/", // TODO: Add this story's URL.
+    },
+  ],
+
   hero: {
     video: "/assets/newhero.mp4",
     showDek: false,
@@ -43,72 +66,101 @@ export const story = {
   introParagraphs: [
     {
       type: "paragraph",
-      text: "Ninety minutes before any fan could enter the stadium and three hours before Northwestern kicked off its Oct. 24 game against Rutgers[cq], former defensive lineman Joe Spivak [cq][cq] paced back and forth in a row of the empty Wildcat Wall.", 
+      text: "Ninety minutes before any fan could enter the stadium and three hours before Northwestern kicked off its Oct. 24 game against Rutgers, former defensive lineman Joe Spivak (Communication ’21, Kellogg ’22) paced back and forth in a row of the empty Wildcat Wall.", 
     },
     {
       type: "paragraph",
-      text: "Sporting a small man bun, a black polo and white high-topped sneakers, the 27-year-old[cq] in-stadium emcee wasn’t wearing his gameday garb quite yet. But in that quiet moment, with his eyes transfixed on the vacant gridiron and a folded sheet of paper waving back and forth in his hand, he immersed himself in his own personal dress rehearsal.",
+      text: "Sporting a small man bun, a black polo and white high-top sneakers, the 27-year-old in-stadium emcee wasn’t wearing his game-day garb quite yet. But in that quiet moment, with his eyes transfixed on the vacant gridiron and his hand waving a folded sheet of paper back and forth, he immersed himself in his own personal dress rehearsal.",
     },
     {
       type: "paragraph",
-      text: "‘I’m not the spark of energy,’ he said with a performative raspiness in his voice. ‘You are, the students are.’ ",
+      text: "“I’m not the spark of energy,” he said to himself with a dramatic raspiness to his voice. “You are; the students are.” ",
     },
   ],
   blocks: [
-    /*{
-      type: "video",
-      id: "pacing-video",
-      videoSrc: "/assets/Pacing.mp4",
-      title: "Pacing drill demonstration",
-      //illustration: { image: toilet, side: "right" },//
-    }, */
     {
       type: "paragraph",
-      text: "Before long, students were lining up in the backyard every Monday night, hoping to squeeze their way into the attic. This weekly tradition continued for nearly two school years.",
+      text: "That morning, Spivak had arrived at Ryan Field before 8 a.m. with a Colectivo cortado and iced coffee in hand. During the week, he said, he doesn’t drink much caffeine. He wants to feel its effects as much as possible in the moments he needs it most — especially on game day.",
     },
     {
       type: "paragraph",
-      text: "When it came time for Heller and his roommates to bid their college house farewell, they left it much as they had occupied it: with humor. They left the chairs and bizarre decor in the attic exactly as they were, preserving a freeze frame of NU history. On their way out, Heller said the roommates also cut up a baby doll and left parts of it scattered around the attic, “just to mess with the new tenants.”",
+      text: "For the past year, ever since Pat Ryan Jr. — the son of Ryan Field’s benefactors and CEO of Ryan Sports Development — reached out via LinkedIn, the former football captain-turned-WWE wrestler has spent his days contemplating one question: What would it take to turn a student section long scoffed at as empty and subdued into one capable of creating a true home field advantage?",
     },
     {
       type: "paragraph",
-      text: "Heller relocated to Los Angeles after graduation. Now, he works as a children’s soccer coach while he launches his comedy career. As he gears up for open mics at small venues with lackluster crowds, he sometimes reminisces about The Prattic.",
-    },
-    {
-      type: "paragraph",
-      text: "“Three months ago I had a hundred of my friends who I was doing stand-up to, and it will be a while until I have a situation like that again,” he said. “But what can you do?”",
-    },
-    {
-      type: "heading",
-      text: "More than just a venue",
-      id: "more-than-just-a-venue",
-    },
-    {
-      type: "paragraph",
-      text: "The Prattic did more than just accelerate the stand-up culture on campus. Weinberg senior Natalie May, a frequent performer at The Prattic, said that the venue’s biggest accomplishment was promoting a culture that made “vulnerability and trying something new cool.”",
-    },
-    {
-      type: "paragraph",
-      text: "May said first-time performers would often bring a big group of friends to cheer them on during their set, which is how many attendees discovered the venue.",
+      text: "As the man tasked with keeping NU’s Wildcat Wall rowdy from the first chord of ACDC’s “Thunderstruck” to the moment the game clock winds down to zero, it’s his job to seek out an answer.",
     },
     {
       type: "audioCard",
-      id: "natalie-may-audio",
-      description: `May said The Prattic encouraged students to go outside of their comfort zones. 
-
-      “It made vulnerability and trying something new cool,” she said.`,
+      id: "marko-audio",
+      description: `McCormick sophomore Marko Maruszewski speaks on the Jolt Show’s impact on the Ryan Field in-game experience.`,
       audioSrc: "/assets/Marko.mp3",
       speaker: "Marko",
       audioLabel: "Listen to Marko",
-      transcript: `Man. Joe brings the energy. I was hanging out with him yesterday on the purple couch in front of tech. He's just the man. He's always bringing the energy and the spirit. We really need to get us started in the mornings at Northwestern, and it's always a good time to see him promoting the Northwestern events. I've been in the front row of the Wildcat wall. I've been on the field on the purple couch, and now I'm gonna go try to get back on the Wildcat Wall again. Honestly, I prefer it a little bit. It's more energy. More in the zone. Yeah, it's been amazing. It's been incredible. It's been intimidating for the opponents and, uh, I've loved it.`, // Replace with the clip’s verbatim transcript.
+      transcript: `Man. Joe brings the energy. I was hanging out with him yesterday on the purple couch in front of Tech. He's just the man. He's always bringing the energy and the spirit. We really need it to get us started in the mornings at Northwestern, and it's always a good time to see him promoting the Northwestern events.
+                  \n I've been in the front row of the Wildcat wall. I've been on the field on the purple couch, and now I'm gonna go try to get back on the Wildcat Wall again. Honestly, I prefer it a little bit. It's more energy. More in the zone. Yeah, it's been amazing. It's been incredible. It's been intimidating for the opponents and I've loved it.`, // Replace with the clip’s verbatim transcript.
     },
     {
-      type: "paragraph",
-      text: "“It built my confidence in stand-up,” May said. “Because if I had something that I wanted to perform, I knew that I would have a place to do it and I wouldn’t have to sit on it for months.”",
+      type: "heading",
+      text: "‘Built for you’",
+      id: "built-for-you",
     },
     {
-      type: "paragraph",
-      text: "Haikal Rozaidi, a second-year computer science graduate student, came to NU last year to pursue his master's after graduating from The Ohio State University. At Ohio State, he was involved in the Buckeye Standup Comedy Club, and he said he initially struggled to find something similar at NU. The first time he walked into The Prattic, Rozaidi said he had found “the coolest thing on campus.”",
+    type: "paragraph",
+    text: "During Spivak’s playing days, the program’s success fluctuated. He suited up for squads that amassed 10 wins and took down SEC teams in bowl games, while also enduring the hardships of two separate 3-9 teams in 2019 and 2021.",
+    },
+    {
+    type: "paragraph",
+    text: "And while he noticed the student section dwindle during those down years, he recognizes that even during a winning campaign like this season’s, the academic rigor of any NU quarter can make it difficult for students to attend each game.",
+    },
+    {
+    type: "paragraph",
+    text: "“Obviously when you’re at Alabama, everyone knows when there’s gonna be a home game,” he said. “But guess what: We’re not Alabama and we don’t want to be.”",
+    },
+    {
+    type: "paragraph",
+    text: "Spivak cherishes the idea that his alma mater produces well-rounded students — those who excel not only in athletics, but also in the classroom, on the stage and wherever else they may be.",
+    },
+    {
+    type: "paragraph",
+    text: "That’s a reality he embraced during his own college years. Aside from his impressive ascent from a non-scholarship football walk-on to a team captain, he pursued a theater minor and gained a reputation as a DJ, performing most memorably at house parties on Dillo Day.",
+    },
+  {
+  type: "paragraph",
+  text: "But regardless of how students choose to get involved during their years at NU, he wants them to know that there is a place for them on the Wildcat Wall — and a stadium full of ’Cats fans hoping they show up.",
+  },
+  {
+  type: "paragraph",
+  text: "“This is a truly rare breed of student that is on this campus, and Saturday games are such an opportunity to come together, relax and enjoy yourself at a place that is truly built for you,” Spivak said. “That 100 by 53 yards, that turf field, that’s for the football players. But the rest of that (about) $850 million stadium is built with the students in mind.”",
+  },
+    {
+      type: "heading",
+      text: "All systems go",
+      id: "all-systems-go",
+    },
+    {
+  type: "paragraph",
+  text: "By 9:45 a.m. on the morning NU took on Rutgers, Spivak stood in front of a small stage in the plaza wedged between the “Purple Line” student section and Central Street. Directly in front of him, a small group of students had begun waiting in line for a chance to try their luck on a mechanical bull.",
+    },
+    {
+  type: "paragraph",
+  text: "To those watching The Jolt Show from their seats or observing its student competitions in the plaza, the hour-long pregame production might appear to run effortlessly.",
+    },
+    {
+  type: "paragraph",
+  text: "But behind the scenes, in the hours before showtime, conversations between Spivak and his producer Grant Penrod can grow intense. On this particular morning, their debate centered around a game modeled after beer pong — more specifically, how they could keep the game inclusive but also engaging to those watching on the big screen.",
+    },
+    {
+      type: "image",
+      src: activity,
+      alt: "People gathered around a table with orange cups and pumpkin buckets at Northwestern.",
+      width: activity.width,
+      height: activity.height,
+      layout: "full",
+      sizes: "100vw",
+      caption: "Jolt Show host Joe Spivak and producer Grant Penrod tested a pregame student activity in the Ryan Field concourse.",
+      credit: "Photo credit: Audrey Pachuta/The Daily Northwestern",
+      creditUrl: "https://dailynorthwestern.com/staff_name/audrey-pachuta/", // Optional photographer profile URL.
     },
     /*
     {
@@ -131,200 +183,153 @@ export const story = {
       I think what The Prattic had was like lightning in a bottle.`, // Replace with the clip’s verbatim transcript.
     },
     */
-
     {
-      type: "paragraph",
-      text: "Since coming to Evanston, Rozaidi has performed at iconic Chicago venues like Zanies, Laugh Factory and The Lincoln Lodge. Rozaidi said that “whispers” of The Prattic — its reputation for having a “hot show” every Monday — have spread beyond the Evanston bubble into the Chicago comedy scene, and the venue has garnered envy among some Chicago comics.",
-    },
-    {
-      type: "paragraph",
-      text: "“They want to get on, but they can’t, because it’s only for Northwestern,” Rozaidi said.",
-    },
-    /*
-    {
+  type: "paragraph",
+  text: "“Every week it’s very much trial by fire, and we are trying to make something better,” Penrod said prior to the pong debacle. “And when we get to do that, it creates an even stronger bond.”",
+  },
+  {
+  type: "paragraph",
+  text: "Penrod, a lanky man in his early thirties with long, flowing hair and glasses, works full-time to meticulously plan and refine The Jolt. A former high school media arts teacher with a wide range of production experience, Penrod came aboard to assist with NU’s gameday experience through a connection he made doing freelance work with Barstool Sports.",
+  },
+  {
+  type: "paragraph",
+  text: "Continuing his work with WWE, where he has wrestled under the ring name “Tank Ledger” since 2022, Spivak resides in Orlando, Florida. He travels to Evanston for each home game, leaving many of the backstage responsibilities to his producer.",
+  },
+  {
+  type: "paragraph",
+  text: "Ahead of the Rutgers game, Penrod arrived in his office long before the sun rose and passed the time eating Munchkin donuts, reviewing schedules and coordinating with other production team members before Spivak arrived.",
+  },
+  {
+  type: "paragraph",
+  text: "Spivak, with his prominent tattoo sleeve and bold western outfit, may be the “celebrity” fans recognize on the jumbotron, but without Penrod’s effort, both men agree that The Jolt couldn’t function in the way it does.",
+  },
+  {
+  type: "paragraph",
+  text: "So far, they said, the response from students, coaches and other fans has been overwhelmingly positive.",
+  },
+  {
+  type: "paragraph",
+  text: "“I have some family coming in for parents’ weekend and any other year it would’ve been like, ‘Oh, maybe we’ll go to the game to pass the time,’” said Weinberg sophomore Christina L’Hommedieu, who participated in The Jolt’s pregame mechanical bull contest. “But this year, the priority is going to the game.”",
+  },
+  {
       type: "audioCard",
-      id: "spencer-thomas-audio",
-      description: `Spencer Thomas (Communication ‘26) had no formal standup experience before The Prattic, but he knew he liked talking to people and telling jokes. After performing his first comedy routine there, he kept going back.
-      
-      “(The Prattic) is a place where you're supposed to experiment,” he said.`,
-      audioSrc: "/assets/Spencer Thomas Embed_mixdown.mp3",
-      speaker: "Spencer",
-      audioLabel: "Listen to Spencer",
-      transcript: `So I think actually the first time I officially really did stand up was at The Prattic. So it was just getting that chance to just kind of go up there and just give it a shot for the first time. And then I just kept going back, 'cause I was like, “Oh, this is a lot of fun, and it's a pretty safe environment to just keep trying things and really experiment and find your voice.”
-
-      I think part of it is because of how silly it was, the fact that it was just in this attic, you know, they have all these silly posters and, like, cans all over the floor and on the walls. It just made you feel safe, like this is a place where you're supposed to experiment and kind of have that college experience of, you know, really putting yourself out there and taking risks. And you don't have to worry about if people are gonna judge you or not, 'cause, you know, everybody there is usually doing it for the first time.
-
-      It was honestly kind of crazy how big it got. They genuinely had to cut how many people, like, could come in, like, cut it off, because they were scared that, like, the roof would fall in, or the floor would fall out. A lot of people were coming to support their friends. A lot of people I knew even would just come to just take a break from studying and just, like, kind of have a nice study break to hear some comedy and laugh a little bit before they would go back to working on finals, or midterms, or projects, or anything at all.
-
-      Beyond just, like, being a great place for comedy, I just think it was a really great space for this campus and this kind of, like, culture of feeling like a college experience. I feel like it was one of my top memories, and it's something I still think I'm gonna remember ten years from now, looking back and questioning why I was doing stand-up in an attic with a toilet in it.`, // Replace with the clip’s verbatim transcript.
-    },*/
-    {
-      type: "paragraph",
-      text: "But The Prattic wasn’t just for students. After being invited by the founders, NU SESP Prof. Sepehr Vakil also got the chance to perform a set in the attic.",
+      id: "christina-audio",
+      description: `Weinberg sophomore Christina L’Hommedieu said that attending games has become a priority since NU football moved to Ryan Field.`,
+      audioSrc: "/assets/Christina.mp3",
+      speaker: "Christina",
+      audioLabel: "Listen to Christina",
+      transcript: `Having a true student section experience that's like one of the best stadium experiences in the Big Ten is really important, and I think it makes the football games that much more exciting. And it's also just exciting that our team's really good this year. We're super competitive. I have some family coming in for parents weekend, and like any other year, it would have been like, oh, maybe we'll go to a game to pass the time. And this year it was like, no, the priority is going to the game. The priority is seeing the football team, seeing the new stadium, supporting the Wildcats. And I think it's just really fun because it drums up a lot of school spirit. It makes me really proud to go to Northwestern and like, it makes me proud to tell my friends and family, oh, I was at that football game. I saw them beat Penn State. I was in that student section and it's just super fun.`, // Replace with the clip’s verbatim transcript.
     },
     {
-      type: "paragraph",
-      text: "A part-time comic, Vakil co-hosts the podcast “A Professor and a Comedian Walk into a Bar” with Chicago comedian Mike Knight and hosts the Laugh and Flow comedy series at Free Flow Kitchen in Evanston.",
+      type: "heading",
+      text: "Made for this",
+      id: "made-for-this",
     },
     {
-      type: "paragraph",
-      text: "Vakil said students at The Prattic found it interesting to see a professor “not just observe, but be part of it.”",
-    },
-    {
-      type: "paragraph",
-      text: "“We have a term in education theory called a third space: where cultural production happens … where people can be absurd and funny and risky and vulnerable, and that was what I saw,” Vakil said.",
-    },
-    {
+  type: "paragraph",
+  text: "To his family, friends and former teammates, Spivak’s role as the in-stadium host at Ryan Field comes as no surprise. In fact, they believe he was made for it.",
+},
+{
+  type: "paragraph",
+  text: "Troy Hudetz (Communication ’21, Kellogg ’22), a former NU linebacker who was Spivak’s teammate and roommate for five years, first met him through a mutual friend while they attended nearby high schools.",
+},
+{
+  type: "paragraph",
+  text: "Through two years in Bobb Hall, a summer in Jones Hall and three years living off campus, Hudetz said he got to know Spivak intimately — not just as a teammate who consistently brought energy to early morning practices, but also as a true friend who he could have “deep, real conversations about life with.”",
+},
+{
+  type: "paragraph",
+  text: "Hudetz remembers fondly the days during the pandemic, when the two would meet up at a hill between their Illinois hometowns of Darien and Naperville to run sprints and listen to music when the team couldn’t practice together.",
+},
+{
+  type: "paragraph",
+  text: "“He’s one of the best people I could pick to be representing the program,” Hudetz said of Spivak’s new role at Ryan Field.",
+},
+{
       type: "image",
-      src: activity,
-      alt: "People gathered around a table with orange cups and pumpkin buckets at Northwestern.",
+      src: pacing,
+      alt: "Spivak paced the field in front of cheering students.",
       width: activity.width,
       height: activity.height,
       layout: "full",
       sizes: "100vw",
-      caption: "Caption placeholder — add photo description here.",
-      credit: "Photo credit: Photographer name / The Daily Northwestern",
-      creditUrl: "", // Optional photographer profile URL.
+      caption: "During the game against Rutgers, Spivak paced the field in front of the Wildcat Wall as students cheered.",
+      credit: "Photo credit: Audrey Pachuta/The Daily Northwestern",
+      creditUrl: "https://dailynorthwestern.com/staff_name/audrey-pachuta/", // Optional photographer profile URL.
     },
     {
+  type: "paragraph",
+  text: "Even though former NU linebacker Bryce Gallagher (SESP ’23) had his own biological brother playing beside him, he said he always viewed Spivak as a “big brother,” someone he could count on to hold him accountable and show him the ropes.",
+},
+{
+  type: "paragraph",
+  text: "On Thanksgiving, when Gallagher couldn’t return home to Massachusetts ahead of NU’s rivalry game against Illinois, he said Spivak invited him and his brother to celebrate the holiday with his family. Together, they would spend the day watching football and then a Christmas movie, which Gallagher called “some of the best memories (he) can think upon.”",
+},
+{
+  type: "paragraph",
+  text: "“The first time I met him and his parents, they just made you feel like one of their own,” Gallagher said.",
+},
+{
+  type: "paragraph",
+  text: "In addition to their willingness to open their home to his teammates on Thanksgiving, Spivak said his parents taught him a variety of lessons he carries with him today.",
+},
+{
+  type: "paragraph",
+  text: "Each day before he and his three older sisters left their childhood home, Spivak’s parents enforced something they called a “smile check,” a testament to their belief that a person’s smile is “the window that lets people see what’s inside.”",
+},
+{
+  type: "paragraph",
+  text: "Now that he’s grown up, that family tradition has followed Spivak to every corner of his career. Whenever he has a microphone in his hand at Ryan Field or in the WWE ring, he feels that he’s sharing his parents’ philosophy with everyone he encounters.",
+},
+{
+  type: "paragraph",
+  text: "“They always said, ‘Smiles spread, enthusiasm is infectious,’” Spivak said. “There’s no better display of that than the Wildcat Wall.”",
+},
+{
       type: "heading",
-      text: "Comedy meets activism",
-      id: "comedy-meets-activism",
+      text: "For the love of the game",
+      id: "for-the-love-of-the-game",
     },
-    {
-      type: "paragraph",
-      text: "As The Prattic gained mainstream popularity on campus, the founders set loftier goals for what the space could become. During the cut-throat Democratic primary race for Illinois’ 9th congressional district in March, they hosted 27-year-old progressive candidate Kat Abughazaleh, who performed a politics-infused stand-up routine poking fun at her opponents.",
-    },
-    {
-      type: "paragraph",
-      text: "“It was a blast,” Abughazaleh said. “I got to focus on making people laugh and laughing with people, and we got a lot of volunteers out of it.”",
-    },
-    {
-      type: "paragraph",
-      text: "The Prattic was the second comedy event of Abughazaleh’s campaign. She also performed stand-up at Chicago’s Laugh Factory in June 2025. She joked that the two venues were similar in their lack of air conditioning, but “the kids were having more fun” at The Prattic.",
-    },
-    /*{
-      type: "audioCard",
-      id: "kat-abughazaleh-audio",
-      description: `Abughazaleh said politicians shouldn’t discount college students and young creatives in their campaign efforts. 
-
-      “‘Real America' is a college attic with a lot of ‘Young Sheldon’ merch on the walls,” she said.`,
-      audioSrc: "/assets/KatAbu_Embed_mixdown_.mp3",
-      speaker: "Kat",
-      audioLabel: "Listen to Kat",
-      transcript: `I valued having college students a lot on my campaign, especially because a lot of people were like, "That's stupid to value young people,” and I'm like, "Well, I'm a young person.”
-
-      I didn't know what The Prattic was. But it sounded like fun, and we really liked non-traditional stuff in the campaign, and so we did it. And it was such a creative space. It had a lot of heart, and I'm glad that I did it.
-
-      Comedy has always been a part of how I communicate. Things are really bad right now, and people will start tuning out if we don't find other ways to communicate. 
-
-      We always talk about “real America”, and it's pretty much exclusively used to refer to, like, farmers in Iowa and conservatives in Ohio, and I think real America is all of America, and I think that includes college students’ attics. I think real America is where people are having fun and appreciating each other and working on art. I think Real America is where you try to communicate and actually understand people's perspectives — and part of why we're in this situation is we didn't listen to young people. 
-
-      So I'm glad that I got to spend time with “real America”, and “real America” is a college attic with a lot of young Sheldon merch on the walls and college students having a good time.`, // Replace with the clip’s verbatim transcript.
-    }, */
 
     {
       type: "paragraph",
-      text: "Venue co-founder Garcia-Bryce coordinated the event after student campaign workers on Abughazaleh’s team reached out to see if The Prattic was interested in hosting the politician.",
+      text: "Back at the Rutgers game, sometime between when the last ping-pong balls were tossed in the plaza and when the ’Cats commenced their first drive, Spivak migrated down to the field and took his place directly in front of the student section.",
     },
     {
-      type: "paragraph",
-      text: "“It’s not that we were choosing sides, but she aligned with what we believed, and we were really happy to be able to help her spread the word at Northwestern,” Garcia-Bryce said.",
+      type: "image",
+      src: handup,
+      alt: "Spivak holding his hat and brushing his har back.",
+      width: activity.width,
+      height: activity.height,
+      layout: "full",
+      sizes: "100vw",
+      caption: "Joe Spivak took a deep breath in between intense moments of keeping the student section energized.",
+      credit: "Photo credit: Audrey Pachuta/The Daily Northwestern",
+      creditUrl: "https://dailynorthwestern.com/staff_name/audrey-pachuta/", // Optional photographer profile URL.
     },
     {
-      type: "paragraph",
-      text: "The Prattic’s philanthropy work culminated in what Garcia-Bryce called The Prattic’s proudest accomplishment: a five-day, multi-venue comedy festival in May that brought together comedians from NU, Chicago and across the country.",
-    },
-    {
-      type: "paragraph",
-      text: "“Prattic Fringe Festival,” which took place on May 7-11, was the product of seven months of phone calls, emails and meetings between Garcia-Bryce, Heller and Hirsch.",
-    },
-    {
-      type: "paragraph",
-      text: "“It was the most busy I’ve ever been in my life,” Heller said.",
-    },
-    {
-      type: "paragraph",
-      text: "Heller said he fantasized about a festival where “everyone in Chicago showed up, and a million people did it, and NBC gave (them) all jobs and a Netflix special.” He said he was naive about the amount of work that would be involved in organizing an event of such scale.",
-    },
-    {
-      type: "paragraph",
-      text: "Even so, Heller said he wouldn’t have changed a thing about how the festival turned out. The five-day festival ended up raising $4,000 for the Illinois Coalition for Immigrant and Refugee Rights.",
-    },
-    {
-      type: "paragraph",
-      text: "“Sometimes to have grandeur in your life, you’ve got to have delusions,” he said.",
-    },
-    {
-      type: "heading",
-      text: "The search for a new stage",
-      id: "the-search-for-a-new-stage",
-    },
-    {
-      type: "paragraph",
-      text: "On Monday nights, the line that once spilled out of a backyard on Pratt Court is gone, and the house has returned to being an ordinary rental property. Still, the community of comics that The Prattic brought together hasn’t given up on keeping the stand-up spirit alive in Evanston.",
-    },
-    /*{
-      type: "audioCard",
-      id: "andrew-mikhail-audio",
-      description: `After meeting Prattic co-founder Luca Hirsch in a standup comedy class at NU, Mikhail was invited to come to the venue around the time it first started up. 
-
-Looking back, Mikhail called The Prattic a “cultural moment” for the NU community.`,
-      
- audioSrc: "/assets/AndrewMikhail_Embed.mp3",
-      speaker: "Andrew",
-      audioLabel: "Listen to Andrew",
-      transcript: `The first show I ever performed, it was packed, like 120 people. People packed it — different people, too. I think they tapped into — there's a real market for student comedy, I guess. People would come; I would meet people through it.
-
-      I’m, like, the target audience for loving The Prattic. Again, I was someone who was already into stand-up, and it was just a dream for these guys to come along and say, ‘Hey, we’re gonna do the organizing, we're gonna do the producing of the show, and there will just be an awesome crowd of 100 people waiting for you every week; you just show up, and you tell the jokes.” 
-
-      The first year of The Prattic, they did a show at Harris Hall for seniors only to perform. A line out the door. Literally, I think their entire grade showed up. For something to be that big of a social unifier at a school as big as Northwestern, it was just unreal. It was, like, this cultural moment. You can’t fake it. Two shows, three shows — sure, everyone comes as a favor or to  check it out. But the fact that people kept coming — there clearly was some demand, and that doesn’t go away.
-
-      Kids here are spoiled, and if you haven’t been to a lot of open mics, you don’t realize how good you have it at The Prattic.
-
-      I love to think about the fact that, hey, if even one of the people who performed at The Prattic makes it big, I just know that they’ll be talking in 50 years or 20 years on some interview about The Prattic.`, // Replace with the clip’s verbatim transcript.
-    */
-
-    {
-      type: "paragraph",
-      text: "Inspired by The Prattic, Communication senior Andrew Mikhail has organized two stand-up comedy events in the last two years. His sophomore year, he organized a stand-up show in the basement of an off-campus fraternity house with his friends.",
-    },
-    {
-      type: "paragraph",
-      text: "Mikhail called The Prattic’s success a “cultural moment” for NU, one that he’s not sure could be recreated with the same level of success.",
-    },
-    {
-      type: "paragraph",
-      text: "“I think so much of it was the guys running it,” he said. “It's hard to replicate.”",
-    },
-    {
-      type: "paragraph",
-      text: "Even without The Prattic’s presence in Evanston, Mikhail said there’s no shortage of comedy talent at NU. He said many students are “real gems” who have great minds for stand-up comedy.",
-    },
-    {
-      type: "paragraph",
-      text: "In recent months, Rozaidi has also taken it upon himself to organize comedy events within Evanston. In September, he and Chicago comedian Nolan Raymond hosted the first “Laughs at Local Note”, a stand-up comedy show occurring monthly at the Local Note Jazz Club. Prattic regulars, including May and Mikhail, performed in the program’s inaugural show.",
-    },
-    {
-      type: "paragraph",
-      text: "But without The Prattic, May said the energy isn’t quite the same.",
-    },
-    {
-      type: "paragraph",
-      text: "“I got used to The Prattic, and I wrote my set with drunk college students in mind,” May said. “Performing in front of a bunch of thirty to fifty-year-olds… it was pretty intimidating.”",
-    },
-    {
-      type: "paragraph",
-      text: "Prof. Vakil is collaborating with Norris to bring monthly comedy showcases to Luna’s Pub featuring NU and Chicago comedians. The first “NU x Chicago Comedy Night” was headlined by Apple TV-featured comedian Kristen Toomey and featured Rozaidi as a student performer.",
-    },
-    {
-      type: "paragraph",
-      //illustration: { image: chair, side: "right", variant: "chair" },//
-      text: "As NU comedians search for the next hot stage, Heller has one piece of advice for anyone trying to run a comedy show: stop worrying about making money.",
-    },
-    {
-      type: "paragraph",
-      text: "“The further you go towards profitability, the worse that your show becomes,” Heller said. “Do your own thing and do the right thing. That’s the message in a nutshell.”",
-    },
+  type: "paragraph",
+  text: "There, he welcomed a group of five students who earned a highly coveted spot on The Jolt’s “Purple Couch,” a place where a handful of lucky winners can enjoy the rare opportunity to watch the game on the field, just a few feet beyond the endzone.",
+},
+{
+  type: "paragraph",
+  text: "At that point, his work was far from finished, but Spivak said he always takes a deep breath the moment a game begins. Thinking back to his own playing days, he said, there’s a moment when all the preparation settles in, and there’s nothing left to do but watch the fruits of your own labor.",
+},
+{
+  type: "paragraph",
+  text: "Spivak knows he has responsibilities to fulfill throughout the game, such as hosting short segments during commercial breaks where he invites students to complete challenges on the field.",
+},
+{
+  type: "paragraph",
+  text: "But for the most part, regardless of his job title or student section stardom, Spivak takes in an NU football game with the same raw excitement as the thousands of students standing behind him.",
+},
+{
+  type: "paragraph",
+  text: "“I think you’d be hard-pressed to find somebody who loves this school as much as I do,” he said.",
+},
+{
+  type: "paragraph",
+  text: "(Jack Greenspan contributed reporting.)",
+},
   ],
 };
