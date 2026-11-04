@@ -329,7 +329,7 @@ export const story = {
 },
 {
   type: "paragraph",
-  text: "(Jack Greenspan contributed reporting.)",
+  text: "*Jack Greenspan contributed reporting.*",
 },
   ],
 };
