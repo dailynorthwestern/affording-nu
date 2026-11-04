@@ -98,7 +98,7 @@ export const story = {
       speaker: "Marko",
       audioLabel: "Listen to Marko",
       transcript: `Man. Joe brings the energy. I was hanging out with him yesterday on the purple couch in front of Tech. He's just the man. He's always bringing the energy and the spirit. We really need it to get us started in the mornings at Northwestern, and it's always a good time to see him promoting the Northwestern events.
-                  \n I've been in the front row of the Wildcat wall. I've been on the field on the purple couch, and now I'm gonna go try to get back on the Wildcat Wall again. Honestly, I prefer it a little bit. It's more energy. More in the zone. Yeah, it's been amazing. It's been incredible. It's been intimidating for the opponents and I've loved it.`, // Replace with the clip’s verbatim transcript.
+                  \n I've been in the front row of the Wildcat Wall. I've been on the field on the purple couch, and now I'm gonna go try to get back on the Wildcat Wall again. Honestly, I prefer it a little bit. It's more energy. More in the zone. Yeah, it's been amazing. It's been incredible. It's been intimidating for the opponents, and I've loved it.`, // Replace with the clip’s verbatim transcript.
     },
     {
       type: "heading",
