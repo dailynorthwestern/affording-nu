@@ -1,12 +1,12 @@
 // Customize only this section using these four color variables.
 .related-stories {
-  --related-background: #501e4c;
-  --related-heading: #ffffff;
-  --related-link: #cda9ca;
-  --related-link-hover: #ffffff;
+  --related-background: #ffffff;
+  --related-heading: #000000;
+  --related-link: #501e4c; 
+  --related-link-hover: #cda9ca;
 
   clear: both;
-  padding-block: 50px 80px;
+  padding-block: 0px 80px;
   background: var(--related-background);
   color: var(--related-heading);
   font: 400 20px/1.4 var(--font-editorial);

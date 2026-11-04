@@ -93,10 +93,10 @@ export const story = {
     {
       type: "audioCard",
       id: "marko-audio",
-      description: `McCormick sophomore Marko Maruszewski speaks on the Jolt Show’s impact on the Ryan Field in-game experience.`,
+      description: `McCormick sophomore Marko Maruszewski speaks on The Jolt Show’s impact on the Ryan Field in-game experience.`,
       audioSrc: "/assets/Marko.mp3",
       speaker: "Marko",
-      audioLabel: "Listen to Marko",
+      audioLabel: "Listen to Maruszewski",
       transcript: `Man. Joe brings the energy. I was hanging out with him yesterday on the purple couch in front of Tech. He's just the man. He's always bringing the energy and the spirit. We really need it to get us started in the mornings at Northwestern, and it's always a good time to see him promoting the Northwestern events.
                   \n I've been in the front row of the Wildcat Wall. I've been on the field on the purple couch, and now I'm gonna go try to get back on the Wildcat Wall again. Honestly, I prefer it a little bit. It's more energy. More in the zone. Yeah, it's been amazing. It's been incredible. It's been intimidating for the opponents, and I've loved it.`, // Replace with the clip’s verbatim transcript.
     },
@@ -158,8 +158,8 @@ export const story = {
       height: activity.height,
       layout: "full",
       sizes: "100vw",
-      caption: "Jolt Show host Joe Spivak and producer Grant Penrod tested a pregame student activity in the Ryan Field concourse.",
-      credit: "Photo credit: Audrey Pachuta/The Daily Northwestern",
+      caption: "Jolt Show host Joe Spivak and producer Grant Penrod tested a pregame student activity in the Ryan Field concourse. (Audrey Pachuta/The Daily Northwestern)",
+      /*credit: "Photo credit: Audrey Pachuta/The Daily Northwestern",*/
       creditUrl: "https://dailynorthwestern.com/staff_name/audrey-pachuta/", // Optional photographer profile URL.
     },
     /*
@@ -217,7 +217,7 @@ export const story = {
       description: `Weinberg sophomore Christina L’Hommedieu said that attending games has become a priority since NU football moved to Ryan Field.`,
       audioSrc: "/assets/Christina.mp3",
       speaker: "Christina",
-      audioLabel: "Listen to Christina",
+      audioLabel: "Listen to L’Hommedieu",
       transcript: `Having a true student section experience that's like one of the best stadium experiences in the Big Ten is really important, and I think it makes the football games that much more exciting. And it's also just exciting that our team's really good this year. We're super competitive. I have some family coming in for parents weekend, and like any other year, it would have been like, oh, maybe we'll go to a game to pass the time. And this year it was like, no, the priority is going to the game. The priority is seeing the football team, seeing the new stadium, supporting the Wildcats. And I think it's just really fun because it drums up a lot of school spirit. It makes me really proud to go to Northwestern and like, it makes me proud to tell my friends and family, oh, I was at that football game. I saw them beat Penn State. I was in that student section and it's just super fun.`, // Replace with the clip’s verbatim transcript.
     },
     {
@@ -253,8 +253,8 @@ export const story = {
       height: activity.height,
       layout: "full",
       sizes: "100vw",
-      caption: "During the game against Rutgers, Spivak paced the field in front of the Wildcat Wall as students cheered.",
-      credit: "Photo credit: Audrey Pachuta/The Daily Northwestern",
+      caption: "During the game against Rutgers, Spivak paced the field in front of the Wildcat Wall as students cheered. (Audrey Pachuta/The Daily Northwestern)",
+      /*credit: "Photo credit: Audrey Pachuta/The Daily Northwestern",*/
       creditUrl: "https://dailynorthwestern.com/staff_name/audrey-pachuta/", // Optional photographer profile URL.
     },
     {
@@ -303,8 +303,8 @@ export const story = {
       height: activity.height,
       layout: "full",
       sizes: "100vw",
-      caption: "Joe Spivak took a deep breath in between intense moments of keeping the student section energized.",
-      credit: "Photo credit: Audrey Pachuta/The Daily Northwestern",
+      caption: "Joe Spivak took a deep breath in between intense moments of keeping the student section energized. (Audrey Pachuta/The Daily Northwestern)",
+      /*credit: "Photo credit: Audrey Pachuta/The Daily Northwestern",*/
       creditUrl: "https://dailynorthwestern.com/staff_name/audrey-pachuta/", // Optional photographer profile URL.
     },
     {
