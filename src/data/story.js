@@ -11,29 +11,27 @@ import beercans from "../assets/beercans.PNG";
 import beercans_left from "../assets/beercans_left.PNG";
 import toilet from "../assets/toilet.PNG";
 import chair from "../assets/chair.png";
+import newhero from "../assets/newhero.mp4";
+import pacing from "../assets/Pacing.mp4";
 
 export const story = {
   title:
-    "“It was lightning in a bottle”: NU comics look back on the now-defunct Prattic comedy club",
+    "Tasked with bolstering Northwestern’s student section, Joe Spivak believes he’s the right man for the job",
   kicker: "In Focus",
   dek: "Along the edge of Lake Michigan, a changing shoreline tells a story of place, community and the ties that hold us together.",
   authors: [
     {
-      name: "Jack Greenspan, Multimedia Features Editor",
-      url: "https://dailynorthwestern.com/staff_name/jack-greenspan/",
-    },
-    {
-      name: "Illustrations by Nicole Cheah",
-      url: "https://dailynorthwestern.com/staff_name/nicole-cheah/",
+      name: " Audrey Pachuta, Senior Staffer",
+      url: "https://dailynorthwestern.com/staff_name/audrey-pachuta/",
     },
   ],
-  date: "2026-10-27",
+  date: "2026-11-02",
   readTime: "6 minute read",
   // Optional warning; leave empty to omit it.
   contentWarning: "",
   sample: false,
   hero: {
-    video: "/assets/PRATTIC.mp4",
+    video: "/assets/newhero.mp4",
     showDek: false,
   },
   credits: [
@@ -42,28 +40,30 @@ export const story = {
     { role: "Assistant Web Developer", name: "Nicole Cheah" },
     { role: "Multimedia Features Editor", name: "Jack Greenspan" },
   ],
-  illustrations: [
-    { image: beercans_left, side: "left" },
-    { image: beercans, side: "right" },
-  ],
+  //illustrations: [
+    //{ image: beercans_left, side: "left" },
+    //{ image: beercans, side: "right" },
+  // ],
   blocks: [
     {
       type: "paragraph",
-      text: "There was no dramatic goodbye when Jackson Heller (Communications ‘26) moved out of the house he and five of his best friends had been renting since their third year at Northwestern. The lease was up. He had made it to graduation and was already planning his post-college life. There was simply no time to get sentimental, he said.",
+      text: "Ninety minutes before any fan could enter the stadium and three hours before Northwestern kicked off its Oct. 24 game against Rutgers[cq], former defensive lineman Joe Spivak [cq][cq] paced back and forth in a row of the empty Wildcat Wall.", 
     },
     {
       type: "paragraph",
-      text: "To the rest of the NU community, however, the house’s vacancy symbolized something else: the end of NU’s only weekly off-campus comedy show.",
+      text: "Sporting a small man bun, a black polo and white high-topped sneakers, the 27-year-old[cq] in-stadium emcee wasn’t wearing his gameday garb quite yet. But in that quiet moment, with his eyes transfixed on the vacant gridiron and a folded sheet of paper waving back and forth in his hand, he immersed himself in his own personal dress rehearsal.",
     },
     {
       type: "paragraph",
-      text: "Dubbed “The Prattic”, the unassuming house sat on Pratt Court, halfway between Foster and Simpson Streets. Heller and his roommates, Mateo Garcia-Bryce (Weinberg ‘26), Luca Hirsch (Communications ‘26), Livia Salituro (Weinberg ‘26), Saifeddine Lahmar (Communications ‘26) and Ainslie Wilson (Communications ‘26), put on their first comedy show in the attic in February 2025.",
+      text: "“I’m not the spark of energy,” he said with a performative raspiness in his voice. “You are, the students are.” ",
     },
-    {
-      type: "paragraph",
-      illustration: { image: toilet, side: "right" },
-      text: "Using tips he had saved up from his time delivering pizzas at Domino’s, Heller purchased $200 worth of lawn chairs from a wholesaler. The housemates transformed their bare-bones, wood-paneled attic into a venue where comedians of all experience levels could perform every Monday night. The dark, low-ceilinged space, with beer cans nailed to the wall and a broken toilet serving as a centerpiece, was as weird as it was comforting.",
-    },
+    /*{
+      type: "video",
+      id: "pacing-video",
+      videoSrc: "/assets/Pacing.mp4",
+      title: "Pacing drill demonstration",
+      //illustration: { image: toilet, side: "right" },//
+    }, */
     {
       type: "paragraph",
       text: "Before long, students were lining up in the backyard every Monday night, hoping to squeeze their way into the attic. This weekly tradition continued for nearly two school years.",
@@ -102,14 +102,10 @@ export const story = {
       description: `May said The Prattic encouraged students to go outside of their comfort zones. 
 
       “It made vulnerability and trying something new cool,” she said.`,
-      audioSrc: "/assets/NatalieMay_Embed_audio.mp3",
-      speaker: "Natalie",
-      audioLabel: "Listen to Natalie",
-      transcript: `I love stand-up and comedy in general, and I’ve been doing it for a while here, and I think a big reaction I hear when I tell people that is that they feel it's something they could never do. 
-
-      It’s really scary to get up on stage and tell people, “I think I’m funny, I hope you think I’m funny too.” That's really scary. And so I think seeing people feel like they could do that and be confident that they would be received well was very cool, and I think it was cool to see people who never would have thought of themselves as comedians kind of tap into that side of themselves. 
-
-      I think it made stand-up cool, and then kind of as an offshoot of that, I think it made vulnerability and trying something new cool. I mean, I just think it demonstrates what people can do when they see a gap and they just put their heads together and decide to try to fill it. Whether it's comedy or whether it's badminton or something else you’re interested in, if you don’t see the opportunity, you can make it for yourself. I think it’s gonna be hard to replicate it exactly, but I do think there's a void now. Now is the opportunity for someone to fill it.`, // Replace with the clip’s verbatim transcript.
+      audioSrc: "/assets/Marko.mp3",
+      speaker: "Marko",
+      audioLabel: "Listen to Marko",
+      transcript: `Man. Joe brings the energy. I was hanging out with him yesterday on the purple couch in front of tech. He's just the man. He's always bringing the energy and the spirit. We really need to get us started in the mornings at Northwestern, and it's always a good time to see him promoting the Northwestern events. I've been in the front row of the Wildcat wall. I've been on the field on the purple couch, and now I'm gonna go try to get back on the Wildcat Wall again. Honestly, I prefer it a little bit. It's more energy. More in the zone. Yeah, it's been amazing. It's been incredible. It's been intimidating for the opponents and, uh, I've loved it.`, // Replace with the clip’s verbatim transcript.
     },
     {
       type: "paragraph",
@@ -119,6 +115,7 @@ export const story = {
       type: "paragraph",
       text: "Haikal Rozaidi, a second-year computer science graduate student, came to NU last year to pursue his master's after graduating from The Ohio State University. At Ohio State, he was involved in the Buckeye Standup Comedy Club, and he said he initially struggled to find something similar at NU. The first time he walked into The Prattic, Rozaidi said he had found “the coolest thing on campus.”",
     },
+    /*
     {
       type: "audioCard",
       id: "haikal-rozaidi-audio",
@@ -141,6 +138,7 @@ export const story = {
 
       I think what The Prattic had was like lightning in a bottle.`, // Replace with the clip’s verbatim transcript.
     },
+    */
 
     {
       type: "paragraph",
@@ -150,6 +148,7 @@ export const story = {
       type: "paragraph",
       text: "“They want to get on, but they can’t, because it’s only for Northwestern,” Rozaidi said.",
     },
+    /*
     {
       type: "audioCard",
       id: "spencer-thomas-audio",
@@ -168,7 +167,7 @@ export const story = {
       It was honestly kind of crazy how big it got. They genuinely had to cut how many people, like, could come in, like, cut it off, because they were scared that, like, the roof would fall in, or the floor would fall out. A lot of people were coming to support their friends. A lot of people I knew even would just come to just take a break from studying and just, like, kind of have a nice study break to hear some comedy and laugh a little bit before they would go back to working on finals, or midterms, or projects, or anything at all.
 
       Beyond just, like, being a great place for comedy, I just think it was a really great space for this campus and this kind of, like, culture of feeling like a college experience. I feel like it was one of my top memories, and it's something I still think I'm gonna remember ten years from now, looking back and questioning why I was doing stand-up in an attic with a toilet in it.`, // Replace with the clip’s verbatim transcript.
-    },
+    },*/
     {
       type: "paragraph",
       text: "But The Prattic wasn’t just for students. After being invited by the founders, NU SESP Prof. Sepehr Vakil also got the chance to perform a set in the attic.",
@@ -202,7 +201,7 @@ export const story = {
       type: "paragraph",
       text: "The Prattic was the second comedy event of Abughazaleh’s campaign. She also performed stand-up at Chicago’s Laugh Factory in June 2025. She joked that the two venues were similar in their lack of air conditioning, but “the kids were having more fun” at The Prattic.",
     },
-    {
+    /*{
       type: "audioCard",
       id: "kat-abughazaleh-audio",
       image: kat,
@@ -222,7 +221,7 @@ export const story = {
       We always talk about “real America”, and it's pretty much exclusively used to refer to, like, farmers in Iowa and conservatives in Ohio, and I think real America is all of America, and I think that includes college students’ attics. I think real America is where people are having fun and appreciating each other and working on art. I think Real America is where you try to communicate and actually understand people's perspectives — and part of why we're in this situation is we didn't listen to young people. 
 
       So I'm glad that I got to spend time with “real America”, and “real America” is a college attic with a lot of young Sheldon merch on the walls and college students having a good time.`, // Replace with the clip’s verbatim transcript.
-    },
+    }, */
 
     {
       type: "paragraph",
@@ -265,7 +264,7 @@ export const story = {
       type: "paragraph",
       text: "On Monday nights, the line that once spilled out of a backyard on Pratt Court is gone, and the house has returned to being an ordinary rental property. Still, the community of comics that The Prattic brought together hasn’t given up on keeping the stand-up spirit alive in Evanston.",
     },
-    {
+    /*{
       type: "audioCard",
       id: "andrew-mikhail-audio",
       image: andrew,
@@ -273,7 +272,8 @@ export const story = {
       description: `After meeting Prattic co-founder Luca Hirsch in a standup comedy class at NU, Mikhail was invited to come to the venue around the time it first started up. 
 
 Looking back, Mikhail called The Prattic a “cultural moment” for the NU community.`,
-      audioSrc: "/assets/AndrewMikhail_Embed.mp3",
+      
+ audioSrc: "/assets/AndrewMikhail_Embed.mp3",
       speaker: "Andrew",
       audioLabel: "Listen to Andrew",
       transcript: `The first show I ever performed, it was packed, like 120 people. People packed it — different people, too. I think they tapped into — there's a real market for student comedy, I guess. People would come; I would meet people through it.
@@ -285,7 +285,7 @@ Looking back, Mikhail called The Prattic a “cultural moment” for the NU comm
       Kids here are spoiled, and if you haven’t been to a lot of open mics, you don’t realize how good you have it at The Prattic.
 
       I love to think about the fact that, hey, if even one of the people who performed at The Prattic makes it big, I just know that they’ll be talking in 50 years or 20 years on some interview about The Prattic.`, // Replace with the clip’s verbatim transcript.
-    },
+    */
 
     {
       type: "paragraph",
@@ -321,7 +321,7 @@ Looking back, Mikhail called The Prattic a “cultural moment” for the NU comm
     },
     {
       type: "paragraph",
-      illustration: { image: chair, side: "right", variant: "chair" },
+      //illustration: { image: chair, side: "right", variant: "chair" },//
       text: "As NU comedians search for the next hot stage, Heller has one piece of advice for anyone trying to run a comedy show: stop worrying about making money.",
     },
     {
