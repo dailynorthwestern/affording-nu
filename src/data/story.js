@@ -11,7 +11,7 @@ import beercans from "../assets/beercans.PNG";
 import beercans_left from "../assets/beercans_left.PNG";
 import toilet from "../assets/toilet.PNG";
 import chair from "../assets/chair.png";
-import newhero from "../assets/newhero.mp4";
+const newhero = "/assets/newhero.mp4";
 import pacing from "../assets/Pacing.mp4";
 
 export const story = {
