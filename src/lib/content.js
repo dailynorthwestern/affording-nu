@@ -2,13 +2,18 @@ export const escapeHTML = (value = '') => String(value).replace(/[&<>"']/g, c =>
 export function safeURL(value = '') {
   return /^(https?:\/\/|mailto:|#|\/(?!\/))/.test(value) ? value : '#';
 }
-// Intentionally limited inline Markdown. Raw HTML is always escaped.
+// Intentionally limited inline Markdown plus the Soundcite span. Other raw HTML is escaped.
 export function inline(text = '') {
-  const pattern = /\[([^\]]+)\]\(([^\s)]+)\)|\*\*(.+?)\*\*|\*(.+?)\*/g;
+  // Permit only the Soundcite inline element used by story copy; all other raw
+  // HTML remains escaped. Attribute values and its label are escaped below.
+  const pattern = /<span class="soundcite" data-url="(https:\/\/[^\"]+)" data-start="(\d+)" data-end="(\d+)" data-plays="(\d+)">([^<]*)<\/span>|\[([^\]]+)\]\(([^\s)]+)\)|\*\*(.+?)\*\*|\*(.+?)\*/g;
   let result = '', start = 0;
   for (const match of text.matchAll(pattern)) {
     result += escapeHTML(text.slice(start, match.index));
-    result += match[1] !== undefined ? `<a href="${escapeHTML(safeURL(match[2]))}">${inline(match[1])}</a>` : match[3] !== undefined ? `<strong>${inline(match[3])}</strong>` : `<em>${inline(match[4])}</em>`;
+    result += match[1] !== undefined
+      ? `<span class="soundcite" data-url="${escapeHTML(match[1])}" data-start="${match[2]}" data-end="${match[3]}" data-plays="${match[4]}">${escapeHTML(match[5])}</span>`
+      : match[6] !== undefined ? `<a href="${escapeHTML(safeURL(match[7]))}">${inline(match[6])}</a>`
+      : match[8] !== undefined ? `<strong>${inline(match[8])}</strong>` : `<em>${inline(match[9])}</em>`;
     start = match.index + match[0].length;
   }
   return result + escapeHTML(text.slice(start));

@@ -7,45 +7,49 @@ import pacing from '../assets/pacing.jpg';
 import handup from '../assets/handup.jpg';
 
 
+
 export const story = {
   title:
-    "Crowned king of the Wildcat Wall, Joe Spivak wants more for NU’s student section",
+    "Affording Northwestern: How an international student lives on $1000 a month in Evanston",
   kicker: "In Focus",
   dek: "Meet Joe Spivak, the man leading the Wildcat Wall.",
   authors: [
     {
-      name: " Audrey Pachuta, Senior Staffer",
-      url: "https://dailynorthwestern.com/staff_name/audrey-pachuta/",
+      name: "Jack Greenspan",
+      url: "https://dailynorthwestern.com/staff_name/jack-greenspan/",
     },
+    { name: "Allegra Lief",
+      url: "https://dailynorthwestern.com/staff_name/allegra-lief/",
+    }
   ],
-  date: "2026-11-02",
+  date: "2026-11-12",
   readTime: "6 minute read",
   // Optional warning; leave empty to omit it.
   
     contentWarning: "",
   sample: false,
-  contactEmails: ["AudreyPachuta2027@u.northwestern.edu"],
+  contactEmails: ["j.greenspan@dailynorthwestern.com", "allegralief2029@u.northwestern.edu"],
   // URL PLACEHOLDERS: Replace each "#related-stories-heading" with the real
   // article URL. Until then, these links stay at the Related Stories heading.
   relatedStories: [
     {
       title:
-        "Rapid Recap: Oregon 34, No. 20 Northwestern 26",
-      url: "https://dailynorthwestern.com/2026/10/31/sports/rapid-recap-oregon-34-no-20-northwestern-26/", // TODO: Add this story's URL.
+        "By the Numbers: Rent in Evanston is rising, mainly near Northwestern",
+      url: "https://dailynorthwestern.com/2026/11/11/data-visualization/by-the-numbers-rent-in-evanston-is-rising-mainly-near-northwestern/", // TODO: Add this story's URL.
     },
     {
-      title: "Gallery: Northwestern defeats Rutgers 42-14",
-      url: "https://dailynorthwestern.com/2026/10/26/photo/gallery-northwestern-defeats-rutgers-42-14/", // TODO: Add this story's URL.
+      title: "Tips for finding off-campus housing in Evanston",
+      url: "https://dailynorthwestern.com/2024/10/21/campus/take-your-time-upperclassman-provide-tips-on-finding-off-campus-housing/", // TODO: Add this story's URL.
     },
     {
       title:
-        "Ryan Field set to open after multi-year, $875 million development",
-      url: "https://dailynorthwestern.com/2026/09/29/sports/ryan-field-set-to-open-after-multi-year-875-million-development/", // TODO: Add this story's URL.
+        "Northwestern students grapple with dining, social life in off-campus housing",
+      url: "https://dailynorthwestern.com/2022/10/27/campus/northwestern-students-grapple-with-dining-social-life-in-off-campus-housing/", // TODO: Add this story's URL.
     },
   ],
 
   hero: {
-    video: "/assets/newhero.mp4",
+    video: "/assets/train-hero.mp4",
     showDek: false,
   },
   // Swap the second visual here. Hero media lives in hero.video above.
@@ -80,7 +84,7 @@ export const story = {
   blocks: [
     {
       type: "paragraph",
-      text: "That morning, Spivak had arrived at Ryan Field before 8 a.m. with a Colectivo cortado and iced coffee in hand. During the week, he said, he doesn’t drink much caffeine. He wants to feel its effects as much as possible in the moments he needs it most — especially on game day.",
+      text: `That morning, Spivak heard <span class="soundcite" data-url="https://github.com/dailynorthwestern/affording-nu-audios/raw/refs/heads/main/Train.m4a" data-start="0" data-end="30000" data-plays="1">the train</span> as he arrived at Ryan Field before 8 a.m. with a Colectivo cortado and iced coffee in hand. During the week, he said, he doesn’t drink much caffeine. He wants to feel its effects as much as possible in the moments he needs it most — especially on game day.`,
     },
     {
       type: "paragraph",
@@ -326,10 +330,6 @@ export const story = {
 {
   type: "paragraph",
   text: "“I think you’d be hard-pressed to find somebody who loves this school as much as I do,” he said.",
-},
-{
-  type: "paragraph",
-  text: "*Jack Greenspan contributed reporting.*",
 },
   ],
 };
