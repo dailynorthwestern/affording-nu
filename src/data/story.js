@@ -216,7 +216,7 @@ export const story = {
     },
     {
       type: "paragraph",
-      text: `He said he came to Chicago expecting students to be somewhat dependent on cars, but was surprised at how “excellent” the <span class="soundcite" data-url="https://github.com/dailynorthwestern/affording-nu-audios/raw/refs/heads/main/Train.m4a" data-start="0" data-end="119000" data-plays="1">public transportation</span> system is.`,
+      text: `He said he came to Chicago expecting students to be somewhat dependent on cars, but was surprised at how “excellent” the public transportation system is.`,
     },
     {
       type: "heading",
