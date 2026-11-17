@@ -1,16 +1,21 @@
-import { introScrollState } from '../lib/story-transition.js';
-
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 
 document.querySelectorAll('[data-story-intro]').forEach(section => {
   const stage = section.querySelector('.intro-stage');
-  const hero = section.querySelector('.intro-hero');
   const panels = [...section.querySelectorAll('[data-intro-panel]')];
+  const alternateMedia = [...section.querySelectorAll('[data-media-panel]')];
   const videos = [...section.querySelectorAll('video')];
   const scrollVideo = section.querySelector('[data-intro-video]');
-  const heroVideo = section.querySelector('[data-hero-video]');
+  const soundToggle = section.querySelector('[data-intro-sound]');
   section.classList.add('intro-enhanced');
   let scheduled = false;
+
+  soundToggle?.addEventListener('click', () => {
+    scrollVideo.muted = !scrollVideo.muted;
+    soundToggle.setAttribute('aria-label', scrollVideo.muted ? 'Turn sound on' : 'Turn sound off');
+    soundToggle.setAttribute('aria-pressed', String(!scrollVideo.muted));
+    if (!scrollVideo.muted) scrollVideo.play().catch(() => { /* Audio starts after browser permission or another user action. */ });
+  });
 
   function syncVideo(video, visible) {
     if (!video) return;
@@ -23,14 +28,14 @@ document.querySelectorAll('[data-story-intro]').forEach(section => {
     const height = stage.clientHeight;
     const header = parseFloat(getComputedStyle(stage).top) || 0;
     const offset = header - section.getBoundingClientRect().top;
-    // Crossfade during the first half-screen of scrolling, before text arrives.
-    const { fade, active } = introScrollState(offset, height, panels.length);
-    hero.style.setProperty('--hero-opacity', String(reduced.matches ? (fade < .5 ? 1 : 0) : 1 - fade));
-    hero.classList.toggle('is-dismissed', fade >= 1);
+    const active = Math.max(0, Math.min(panels.length - 1, Math.floor(Math.max(0, offset) / height)));
     panels.forEach((panel, index) => panel.classList.toggle('is-active', index === active));
+    const selectedMedia = alternateMedia
+      .filter(media => Number(media.dataset.mediaPanel) <= active)
+      .at(-1);
+    alternateMedia.forEach(media => media.classList.toggle('is-active', media === selectedMedia));
     const visible = offset > -height && offset < section.offsetHeight;
-    syncVideo(heroVideo, visible && fade < 1);
-    syncVideo(scrollVideo, visible && fade > 0);
+    syncVideo(scrollVideo, visible);
   }
 
   function schedule() {
@@ -47,3 +52,14 @@ document.querySelectorAll('[data-story-intro]').forEach(section => {
   });
   update();
 });
+
+const fencingIntro = document.querySelector('.story-intro-fencing');
+if (fencingIntro) {
+  const fencingObserver = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      fencingIntro.classList.add('is-visible');
+      fencingObserver.disconnect();
+    }
+  }, { threshold: 0.1 });
+  fencingObserver.observe(fencingIntro);
+}

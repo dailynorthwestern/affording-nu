@@ -5,9 +5,10 @@ import DecorativeIllustration from './DecorativeIllustration.astro';
 import AudioStoryCard from './AudioStoryCard.astro';
 import PullQuote from './PullQuote.astro';
 import ScrollySection from './ScrollySection.astro';
+import ScrollytellingIntro from './ScrollytellingIntro.astro';
 import VideoEmbed from './VideoEmbed.astro';
 import { inline } from '../lib/content.js';
-const { blocks, sample, illustrations = [] } = Astro.props;
+const { blocks, sample, illustrations = [], intro } = Astro.props;
 // Isolate the opening's floats from later media while keeping text in their flow.
 const firstOtherBlock = blocks.findIndex(block => block.type !== 'paragraph');
 const openingCount = illustrations.length ? (firstOtherBlock < 0 ? blocks.length : firstOtherBlock) : 0;
@@ -31,6 +32,7 @@ const closing = closingStart < 0 ? [] : blocks.slice(closingStart);
     {block.type === 'image' && <ArticleImage block={block} />}
     {block.type === 'quote' && <PullQuote block={block} />}
     {block.type === 'scrolly' && <ScrollySection block={block} />}
+    {block.type === 'immersive' && intro && <ScrollytellingIntro story={intro} block={block} />}
     {['video', 'embed'].includes(block.type) && <VideoEmbed block={block} />}
     {block.type === "addreporting" && <addreporting {...block} />}
   </>)}

@@ -27,7 +27,7 @@ export function validateStory(story) {
   } else image(story.hero);
   const ids = new Set();
   for (const block of story.blocks) {
-    if (!['paragraph','heading','image','quote','video','embed','scrolly','audioCard','addreporting', 'article-body'].includes(block.type)) throw new Error(`Unsupported story block: ${block.type}`);
+    if (!['paragraph','heading','image','quote','video','embed','scrolly','audioCard','addreporting','article-body','immersive'].includes(block.type)) throw new Error(`Unsupported story block: ${block.type}`);
     if (block.id) { if (ids.has(block.id)) throw new Error(`Duplicate section id: ${block.id}`); ids.add(block.id); }
     if (['paragraph','heading','quote'].includes(block.type) && !block.text) throw new Error(`${block.type} needs text.`);
     if (block.type === 'image') image(block);
