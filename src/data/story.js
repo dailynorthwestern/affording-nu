@@ -22,7 +22,7 @@ export const story = {
       url: "https://dailynorthwestern.com/staff_name/allegra-lief/",
     }
   ],
-  date: "2026-11-12",
+  date: "2026-11-16",
   readTime: "6 minute read",
   // Optional warning; leave empty to omit it.
   
