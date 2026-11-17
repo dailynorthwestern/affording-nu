@@ -29,6 +29,7 @@ document.querySelectorAll('[data-story-intro]').forEach(section => {
     const header = parseFloat(getComputedStyle(stage).top) || 0;
     const offset = header - section.getBoundingClientRect().top;
     const active = Math.max(0, Math.min(panels.length - 1, Math.floor(Math.max(0, offset) / height)));
+    section.dataset.activePanel = String(active);
     panels.forEach((panel, index) => panel.classList.toggle('is-active', index === active));
     const selectedMedia = alternateMedia
       .filter(media => Number(media.dataset.mediaPanel) <= active)
