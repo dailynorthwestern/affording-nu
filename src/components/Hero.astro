@@ -19,3 +19,14 @@ const { hero } = story;
   </div>
   <a href="#intro-steps" class="scroll-cue" aria-label="Scroll to article"><span aria-hidden="true">↓</span></a>
 </section>
+<script>
+  const hero = document.querySelector('.hero');
+  const heroVideo = hero?.querySelector('[data-hero-video]');
+  const setHeroRatio = () => {
+    if (heroVideo?.videoWidth && heroVideo?.videoHeight) {
+      hero.style.setProperty('--hero-ratio', `${heroVideo.videoWidth} / ${heroVideo.videoHeight}`);
+    }
+  };
+  heroVideo?.addEventListener('loadedmetadata', setHeroRatio);
+  setHeroRatio();
+</script>

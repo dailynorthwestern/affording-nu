@@ -30,7 +30,7 @@ const label = block?.label || 'Story opening';
   import '../scripts/intro.js';
 </script>
 <style>
-.story-intro { position: relative; margin-block: 3rem; background: #17151a; color: white; }
+.story-intro { position: relative; margin-block: clamp(1.5rem, 4vw, 3rem); background: #17151a; color: white; }
 .story-intro-fencing.intro-enhanced .intro-background > img { opacity: 0; transition: opacity 1.2s ease; }
 .story-intro-fencing.intro-enhanced.is-visible .intro-background > img { opacity: 1; }
 .intro-stage { position: relative; }
@@ -57,6 +57,7 @@ const label = block?.label || 'Story opening';
   .intro-enhanced .intro-panels { padding: 24px 20px max(6svh, env(safe-area-inset-bottom)); }
 }
 @media (max-width: 700px) {
+  .story-intro { background: #000; }
   .intro-panel { font-size: 18px; }
   .intro-background { background: #000; }
   .intro-background video, .intro-background img { object-fit: contain; }

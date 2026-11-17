@@ -42,10 +42,14 @@ document.querySelectorAll('[data-story-intro]').forEach(section => {
   function schedule() {
     if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
   }
+  const stageObserver = new ResizeObserver(schedule);
+  stageObserver.observe(stage);
   // One frame per scroll event batch keeps the crossfade continuous in both directions.
   addEventListener('scroll', schedule, { passive: true });
   addEventListener('resize', schedule);
   addEventListener('pageshow', schedule);
+  scrollVideo?.addEventListener('loadedmetadata', schedule);
+  section.querySelectorAll('.intro-background img').forEach(image => image.addEventListener('load', schedule));
   reduced.addEventListener('change', schedule);
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) videos.forEach(video => video.pause());
@@ -64,3 +68,4 @@ if (fencingIntro) {
   }, { threshold: 0.1 });
   fencingObserver.observe(fencingIntro);
 }
+
